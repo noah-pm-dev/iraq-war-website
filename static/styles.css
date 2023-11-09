@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('header-image.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    flex-wrap: nowrap;
+    display: flex;
+    background-color: #333;
+    overflow: hidden;
+    width: 40%;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.navbar>a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    width: 50%;
+    height: 90%;
+    text-decoration: none;
+}
+
+.content {
+    padding: 20px;
+}

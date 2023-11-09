@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iraq War</title>
+</head>
+<body>
+    <div class="navbar">
+        <a class="navbar_button" href="/timeline">Page 1</a>
+        <a class="navbar_button" href="#page2">Page 2</a>
+        <a class="navbar_button" href="#page3">Page 3</a>
+    </div>
+
+    <div id="page1" class="page">
+        <header>
+            <h1>Welcome to Page 1</h1>
+        </header>
+        <div class="container">
+            <div class="content">
+                <p>Content for Page 1 goes here.</p>
+                <img src="image1.jpg" alt="Image 1" align="left">
+                <p>More text...</p>
+                <img src="image2.jpg" alt="Image 2" align="right">
+            </div>
+        </div>
+    </div>
+
+    <div id="page2" class="page">
+        <header>
+            <h1>Welcome to Page 2</h1>
+        </header>
+        <div class="container">
+            <div class="content">
+                <p>Content for Page 2 goes here.</p>
+                <img src="image3.jpg" alt="Image 3" align="left">
+                <p>More text...</p>
+                <img src="image4.jpg" alt="Image 4" align="right">
+            </div>
+        </div>
+    </div>
+
+    <div id="page3" class="page">
+        <header>
+            <h1>Welcome to Page 3</h1>
+        </header>
+        <div class="container">
+            <div class="content">
+                <p>Content for Page 3 goes here.</p>
+                <img src="image5.jpg" alt="Image 5" align="left">
+                <p>More text...</p>
+                <img src="image6.jpg" alt="Image 6" align="right">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle page swapping
+        document.querySelectorAll('.page').forEach(page => {
+            if(page.getAttribute('id')  != 'page1')
+            page.style.display = 'none';
+        });
+
+        window.location.hash = '#page1';
+
+        window.addEventListener('hashchange', change => {
+            navigateToPage(window.location.hash)
+        });
+
+        const navigateToPage = (pageId) => {
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.querySelector(pageId).style.display = 'block';
+        };
+    </script>
+</body>
+</html>
