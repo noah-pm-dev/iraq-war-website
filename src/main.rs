@@ -11,7 +11,8 @@ async fn main() {
         .route("/", get_service(ServeFile::new("static/index.html")))
         .route("/world", get(world))
         .route("/timeline", get_service(ServeFile::new("static/timeline.html")))
-        .nest_service("/assets", get_service(ServeDir::new("static")));
+        .nest_service("/assets", get_service(ServeDir::new("static")))
+        .nest_service("/images", get_service(ServeDir::new("images")));
 
 
     axum::Server::bind(&"0.0.0.0:8000".parse().unwrap())

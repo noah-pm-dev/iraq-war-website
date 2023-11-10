@@ -4,9 +4,21 @@
 
 /* Set a background color */
 body {
-    background-color: #474e5d;
+    background-image: url("/images/kneeling_soldier_child.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Helvetica, sans-serif;
 }
+
+/* body::after {
+    background: rgba(242,242,242,0.8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    position: absolute;
+} */
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
