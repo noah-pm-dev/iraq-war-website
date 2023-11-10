@@ -72,7 +72,7 @@ body {
     height: 25px;
     right: -17px;
     background-color: white;
-    border: 4px solid #FF9F55;
+    border: 4px solid #001263;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -127,6 +127,16 @@ body {
     background-color: white;
     position: relative;
     border-radius: 6px;
+}
+
+.text-content-container {
+    background-color: rgba(255, 255, 255, 0.692);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    max-width: 2000px;
+    
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
